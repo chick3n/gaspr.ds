@@ -2,3 +2,10 @@ streamlit
 python-dotenv
 flask
 Flask[async]
+python-dotenv
+azure-storage-blob
+aiohttp
+asyncio
+aiofiles
+llama_index
+openai
