@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "streamlit",
+            "type": "python",
+            "request": "launch",
+            "module": "streamlit",
+            "cwd": "${workspaceFolder}/examples",
+            "args": [
+                "run",
+                "streamlit_demo.py"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "backend",
+            "type": "python",
+            "request": "launch",
+            "program": "server.py",
+            "cwd": "${workspaceFolder}/document_search/backend",
+            "console": "integratedTerminal",
+        },
+        {
+            "command": "npm start",
+            "name": "frontend",
+            "request": "launch",
+            "type": "node-terminal",
+            "cwd": "${workspaceFolder}/document_search/frontend",
+        }
+    ],
+    "compounds": [
+        {
+            "name": "front/backend",
+            "configurations": ["backend", "frontend"],
+            "stopAll": true
+        }
+    ]
+}
